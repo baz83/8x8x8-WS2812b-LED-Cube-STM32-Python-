@@ -33,7 +33,7 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
 ## Hardware Requirements
 
 * STM32F401RE Nucleo-64 Development Board (or similar STM32F4).
-* 512 x WS2812B Individually Addressable RGB LEDs (e.g., 5mm through-hole package).
+* 512 x WS2812B Individually Addressable RGB LEDs in 5mm through-hole package).
 * Approx. 40-50 metres of Tinned Copper Wire (e.g., 18 SWG / 1.1-1.2mm diameter).
 * 512 x 0.1µF Decoupling Capacitors (e.g., 0603 SMD package).
 * Hookup Wire (e.g., 26 AWG) for data lines.
@@ -48,8 +48,8 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
 
 ## Software Components
 
-1.  **STM32 Firmware:** Located in the `[Your STM32 Project Folder Name]` directory. Developed using STM32CubeIDE and HAL libraries. Based on the WS2812B driver library by Martin Hubacek.
-2.  **Python Host Application:** Located in the `[Your Python Project Folder Name]` directory. Requires Python 3.x.
+1.  **STM32 Firmware:** Located in the `LED_CUBE` directory. Developed using STM32CubeIDE and HAL libraries. Based on the WS2812B driver library by Martin Hubacek.
+2.  **Python Host Application:** Located in the `Python` directory. Requires Python 3.x.
 
 ## Dependencies
 
@@ -62,16 +62,6 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
 * Matplotlib
 * PySerial
 
-You can usually install these using pip:
-`pip install PyQt5 numpy scipy trimesh matplotlib pyserial`
-*(Note: Trimesh might have additional dependencies like `rtree`)*
-
-**STM32 Firmware:**
-
-* STM32CubeIDE (or other compatible ARM GCC toolchains).
-* STM32F4 HAL Libraries (usually managed via CubeIDE).
-* The core WS2812B driver code (adapted from Martin Hubacek).
-
 ## Installation and Setup
 
 **STM32 Firmware:**
@@ -82,11 +72,6 @@ You can usually install these using pip:
 4.  Build the project.
 5.  Flash the resulting binary (`.bin` or `.elf`) onto the Nucleo board using STM32CubeProgrammer or the IDE's built-in flashing tool via the ST-Link USB connection.
 
-**Python Host Application**
-
-1.  Ensure Python 3.x and `pip` are installed.
-2.  Navigate to the Python application directory in your terminal.
-3.  Install the required dependencies: `pip install -r requirements.txt` (if you create a requirements file) or install them individually as listed above.
 
 ## Usage
 
@@ -99,15 +84,10 @@ You can usually install these using pip:
 7.  **Send to Cube:** Wait for the status to indicate "Ready to send (STM32 is ready)" (meaning the STM32 sent the 0xAA signal). Click the "Send" button. The voxel data will be transmitted to the cube.
 8.  **Interact with Cube:** Use the push buttons connected to the STM32 to cycle through animation patterns or display/rotate the loaded STL model.
 
-## File Structure (Example)
 
-├── STM32_Firmware/      # STM32CubeIDE Project│   ├── Core/│   ├── Drivers/│   ├── Middlewares/     # (If used)│   └── ...              # Other project files (.ioc, etc.)├── Python_Host_App/     # Python GUI Application│   ├── gui.py           # Main GUI script│   ├── processing.py    # STL processing functions│   ├── visualization.py # Matplotlib functions│   ├── loading.gif      # Spinner GIF│   └── requirements.txt # Python dependencies├── Hardware/            # (Optional: CAD files, Schematics)│   ├── Base_Design.f3d│   └── Jigs/└── README.md            # This file
-## License
-
-The core WS2812B DMA driver implementation is based on work by Martin Hubacek and is typically licensed under the MIT License. Please refer to the specific source files for exact licensing terms. The modifications and other parts of this project are [Specify Your License - e.g., MIT License, GPL, etc. Choose one!].
+The core WS2812B DMA driver implementation is based on work by Martin Hubacek and is typically licensed under the MIT License. Please refer to the specific source files for exact licensing terms.
 
 ## Acknowledgements
 
 * Core WS2812B STM32 driver concepts adapted from Martin Hubacek (martinhubacek.cz).
 * Guidance provided by Dr. Thomas Gilbert.
-* [Any other acknowledgements - e.g., University Department].
