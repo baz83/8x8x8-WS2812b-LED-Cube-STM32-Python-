@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This repository contains the hardware design files (implicitly, though not provided here), STM32 firmware, and Python host application for an 8x8x8 volumetric LED display cube. The project aims to create an accessible yet high-performance true 3D display using 512 WS2812B Neopixel LEDs, controlled by an STM32F401RE microcontroller. It demonstrates displaying pre-programmed animations and rendering 3D models from STL files, received from the host application via serial communication.
+This repository contains STM32 firmware and Python host application for an 8x8x8 LED cube. The project aims to create an accessible yet high-performance true 3D display using 512 WS2812B Neopixel LEDs, controlled by an STM32F401RE microcontroller. It displays pre-programmed animations and renders 3D models from STL files received from the host application via serial communication.
 
 A key feature is the high refresh rate (approx. 400 Hz) achieved through optimised firmware utilising Timer-synchronised DMA transfers to control 8 LED strips (planes) in parallel, leveraging the STM32's BSRR register and ARM bit-banding for efficient data preparation.
 
-**(Optional: Add a photo or GIF of the working cube here)**
+
 ## Features
 
 * **Hardware:** 8x8x8 matrix (512 WS2812B LEDs), custom 3D-printed base, STM32F401RE Nucleo board, Mean Well SMPS.
@@ -19,7 +19,7 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
     * Displays received voxel data (e.g., from STL files).
     * Real-time rotation of displayed voxel models via button input.
     * Software brightness control.
-* **Python Host Application:**
+* **Python Host Application**
     * Graphical User Interface (PyQt5).
     * Loads standard STL files.
     * Processes STLs into an 8x8x8 voxel grid using a multi-resolution pipeline (Trimesh, NumPy, SciPy): Normalise -> 64x64x64 Voxelise -> Downsample (with threshold).
@@ -27,7 +27,7 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
     * Handles serial port detection and connection (PySerial).
     * Packs 8x8x8 voxel data into 64 bytes with coordinate transformation.
     * Transmits data to STM32 using a start/end marker protocol.
-    * Listens for 'Ready' signal from STM32.
+    * Listens for the 'Ready' signal from STM32.
     * Uses background threading (QThread) for non-blocking STL processing.
 
 ## Hardware Requirements
@@ -53,7 +53,7 @@ A key feature is the high refresh rate (approx. 400 Hz) achieved through optimis
 
 ## Dependencies
 
-**Python Host Application:**
+**Python Host Application**
 
 * PyQt5
 * NumPy
@@ -68,7 +68,7 @@ You can usually install these using pip:
 
 **STM32 Firmware:**
 
-* STM32CubeIDE (or other compatible ARM GCC toolchain).
+* STM32CubeIDE (or other compatible ARM GCC toolchains).
 * STM32F4 HAL Libraries (usually managed via CubeIDE).
 * The core WS2812B driver code (adapted from Martin Hubacek).
 
@@ -82,7 +82,7 @@ You can usually install these using pip:
 4.  Build the project.
 5.  Flash the resulting binary (`.bin` or `.elf`) onto the Nucleo board using STM32CubeProgrammer or the IDE's built-in flashing tool via the ST-Link USB connection.
 
-**Python Host Application:**
+**Python Host Application**
 
 1.  Ensure Python 3.x and `pip` are installed.
 2.  Navigate to the Python application directory in your terminal.
