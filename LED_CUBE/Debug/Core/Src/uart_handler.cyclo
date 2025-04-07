@@ -1,0 +1,5 @@
+../Core/Src/uart_handler.c:20:6:UART_Handler_Init	1
+../Core/Src/uart_handler.c:30:6:UART_SendState	1
+../Core/Src/uart_handler.c:40:9:UART_IsDataReceived	1
+../Core/Src/uart_handler.c:50:6:UART_GetReceivedData	1
+../Core/Src/uart_handler.c:60:6:UART_RxCpltCallback	1

@@ -1,0 +1,10 @@
+../Core/Src/ws2812b.c:299:6:DMA_TransferError	1
+../Core/Src/ws2812b.c:464:13:ws2812b_set_pixel	1
+../Core/Src/ws2812b.c:237:13:loadNextFramebufferData	1
+../Core/Src/ws2812b.c:332:6:DMA_TransferCompleteHandler	3
+../Core/Src/ws2812b.c:306:6:DMA_TransferHalfHandler	3
+../Core/Src/ws2812b.c:394:6:DMA2_Stream2_IRQHandler	1
+../Core/Src/ws2812b.c:409:6:TIM1_UP_TIM10_IRQHandler	1
+../Core/Src/ws2812b.c:423:6:HAL_TIM_PeriodElapsedCallback	1
+../Core/Src/ws2812b.c:632:6:ws2812b_init	3
+../Core/Src/ws2812b.c:649:6:ws2812b_handle	12

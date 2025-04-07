@@ -1,0 +1,12 @@
+../Core/Src/led_control.c:31:17:Wheel	3
+../Core/Src/led_control.c:57:6:LED_Control_Init	2
+../Core/Src/led_control.c:84:6:updateLEDsChannel	5
+../Core/Src/led_control.c:136:6:updateLEDs	2
+../Core/Src/led_control.c:148:6:LED_Control_Process	1
+../Core/Src/led_control.c:159:9:getState	1
+../Core/Src/led_control.c:168:6:setState	1
+../Core/Src/led_control.c:177:6:setLEDBrightness	2
+../Core/Src/led_control.c:191:7:getLEDBrightness	1
+../Core/Src/led_control.c:200:6:updateLEDAnimationChannel	5
+../Core/Src/led_control.c:244:6:updateLEDAnimation	2
+../Core/Src/led_control.c:257:6:setDifferentPatterns	1

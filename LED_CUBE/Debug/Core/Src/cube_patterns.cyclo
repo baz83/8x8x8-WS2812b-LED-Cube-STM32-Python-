@@ -1,0 +1,17 @@
+../Core/Src/cube_patterns.c:94:6:CUBE_Patterns_SetMode	2
+../Core/Src/cube_patterns.c:121:9:CUBE_Patterns_GetMode	1
+../Core/Src/cube_patterns.c:130:9:CUBE_Patterns_GetCurrentPattern	1
+../Core/Src/cube_patterns.c:140:6:CUBE_Patterns_ShowStaticPattern	50
+../Core/Src/cube_patterns.c:22:6:CUBE_Patterns_Init	1
+../Core/Src/cube_patterns.c:106:6:CUBE_Patterns_NextPattern	2
+../Core/Src/cube_patterns.c:272:6:pattern_PlaneWave	4
+../Core/Src/cube_patterns.c:299:6:pattern_Rain	7
+../Core/Src/cube_patterns.c:325:6:pattern_Sphere	6
+../Core/Src/cube_patterns.c:359:6:pattern_Spiral	7
+../Core/Src/cube_patterns.c:389:6:pattern_FireEffect	8
+../Core/Src/cube_patterns.c:425:6:pattern_BouncingBall	11
+../Core/Src/cube_patterns.c:490:6:pattern_Snake3D	8
+../Core/Src/cube_patterns.c:543:6:pattern_Ripples	7
+../Core/Src/cube_patterns.c:583:6:pattern_Helix	14
+../Core/Src/cube_patterns.c:622:6:pattern_Fountain	15
+../Core/Src/cube_patterns.c:39:6:CUBE_Patterns_ProcessAnimation	13
